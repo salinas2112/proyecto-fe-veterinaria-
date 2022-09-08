@@ -1,0 +1,307 @@
+/*-------------------RESET GENERAL------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+/*---------------general-------------*/
+
+main, header, aside, footer{
+    padding: 20px 0;
+    flex: 1;
+}
+
+h1, h2, h3, h4, p, li {
+    padding: 0.5em 0;
+    line-height: 1.6rem;
+}
+
+
+li{
+   list-style: square;
+   margin-left: 1em; 
+}
+
+/*-----------colore-fondo--------------*/
+
+.fondo-blanco {background-color: #ffffff;}
+
+.fondo-negro {background-color: #000000;}
+
+.fondo-gris {background-color: #e3e3e3;}
+
+.fondo-azul-base {background-color: #125b7d;}
+
+.fondo-azul-01 {background-color: #80abbf;}
+
+.fondo-azul-02 {background-color: #0b4561;}
+
+.fondo-verde-base {background-color: #378e74;}
+
+.fondo-verde-01 {background-color: #94c7b8;}
+
+.fondo-verde-02 {background-color: #276d58;}
+
+/*-------------- color - texto -------------*/
+
+.texto-blanco {color: #ffffff;}
+
+.texto-negro {color: #000000;}
+
+.texto-gris {color: #747474;}
+
+.texto-azul-base {color: #125b7d;}
+
+.texto-azul-01 {color: #80abbf;}
+
+.texto-azil-02 {color: #0b4561;}
+
+.texto-verde-base {color: #378e74;}
+
+.texto-verde-01 {color: #94c7b8;}
+
+.texto-verde-02 {color: #276d58;}
+
+
+/*------------centra la informacion en general-----------*/
+
+.wrapper{
+    margin: auto;
+    max-width: 75rem;
+}
+
+.header .wrapper,
+.footer .wrapper
+.footer .info {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*----------- contenido ------------*/
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.intro {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+}
+
+.intro .video,
+.intro .text {
+    margin: 0 0. 5em;
+}
+
+/*---------------- sidebar ------------*/
+
+.sidebar {
+    flex: 1 0 calc(25% - 1em); /*shorthand for flex-grow: 1; flex-shrink: 0; flex-basis: 300px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em;
+}
+
+.sidebar .linke-interes {
+    margin: 1em 0;
+}
+
+.sidebar a{ 
+    text-decoration: none;
+    color: #276d58;
+}
+
+/*--------------- footer -------------*/
+
+.footer, .footer a{
+    color: #ffffff;
+}
+
+.footer .intro {
+    flex-direction: column;
+}
+
+.footer .intro p {
+    font-size: small;
+    padding: 0 0.33em ;
+} 
+
+.footer .info,
+.footer .redes-sociales {
+    flex: 2;
+}
+
+.footer .menu {
+    flex: 3;
+}
+
+/*------- - menu - igual para header como para footer -------*/
+
+.menu ul,
+.redes-sociales {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu a,
+.redes-sociales a{
+    text-decoration: none;
+    margin: 0 1em;
+    color: #ffffff;
+}
+
+/*-------------------- cards ---------------------------*/
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex: 0 1 calc(33.3% - 1em);
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1em  0 ;
+    box-shadow: 0.1em 0.1em #b0b0b0;
+    align-self: stretch;
+    gap: 1em;
+    margin: 1em 0.5em ;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.card p {
+    padding: 0 1em ;
+}
+
+.card .card-header {
+    display: flex;
+    flex: 1;
+    padding: 0 1em  ;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .card-profile {
+    flex-grow: 11;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.card i {
+    flex-grow:  1;
+}
+
+.card .card-profile img {
+    max-width: 50px;
+    border-radius: 50px;
+}
+
+/*----------- bander ----------------*/
+
+.hero {
+    background-image: url(../img/banner-img.jpg);
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*-------------- mandia queries --------*/
+
+
+    
+@media screen and (min-width:640px) {
+    .flex-container {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .header .wrapper
+    .footer .wrapper
+    .footer .info {
+        flex-direction: column;
+    }
+}
+
+.menu,
+.redes-sociales  {
+    margin: 1.5em 0 0 0;
+}
+
+.menu a {
+    margin: 0 0.3em;
+}
+
+.card {
+  flex: 0 1 100%; 
+}  
+
+@media screen and (min-width: 701px) and (max-width: 1199px)  {
+    .card {
+        flex: 0 1 calc(50% - 1em);
+    }
+}
+
+.footer p {
+    font-size: 10px !important;
+    line-height: 1.75em;
+}
+
+.footer .menu a,
+.redes-sociales a {
+    margin: 0.3em;
+}
+
+.menu a {
+    font-size: small;
+}
+
+@media screen and (max-width: 1200px) {
+    .intro {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+   .video-desktop{
+       display: none;
+   }  
+}
+
+@media screen and (min-width:1201px) {
+    .intro .video{
+        display: none;
+    }
+   
+    .intro .video-desktop {
+        display: inline;
+        margin-left: 1em;
+    }
+}
+
